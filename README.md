@@ -1,19 +1,35 @@
+# Sistema de Información en Bash
 
-# System Information Shell Script
+Este script en Bash ofrece una interfaz de usuario para monitorear y obtener información vital del sistema operativo Linux. Incluye funcionalidades para revisar el espacio libre del disco, el tamaño ocupado por un directorio, el uso del procesador, y el número de usuarios conectados.
 
-This shell script provides a simple menu to access various system information. The script includes the following options:
+## Funcionalidades Implementadas
 
-1. **Disk Space**: This function (`disk_space`) shows the free disk space in human-readable format.
-2. **Directory Size**: This function (`dir_size`) prompts the user to enter a directory path and then displays the size of the specified directory.
-3. **CPU Usage**: This function (`cpu_usage`) displays the current CPU load.
-4. **Users Connected**: This function (`users_connected`) displays the number of users currently connected to the system.
-5. **Users Connected Since Last**: This function (`users_connected_since_last`) displays the number of users connected since the last time this function was called.
+- **Espacio Libre del Disco**: Utiliza `df -h` para mostrar el espacio libre disponible en el sistema.
+- **Tamaño de Directorio**: Emplea `du -sh` para calcular el tamaño ocupado por un directorio específico, incluyendo sus archivos y subdirectorios.
+- **Uso del Procesador**: Usa `top -bn1` para informar sobre la carga actual del procesador.
+- **Usuarios Conectados**: Implementa `who | wc -l` para mostrar el número de usuarios actualmente conectados al sistema.
+- **Usuarios Conectados desde la Última Consulta**: Registra cuántos usuarios se han conectado desde la última vez que se consultó esta opción.
 
-The script runs in a loop, displaying a menu for the user to select an option. The `last_users` variable is initialized before the loop starts, storing the number of users connected at that time.
+## Uso
 
-To run the script, you can use the following command in a terminal:
+Para demostrar la funcionalidad de estas herramientas, el script proporciona un menú interactivo donde el usuario puede seleccionar la información que desea consultar.
 
-```shell
-chmod +x system_info.sh
+## Requisitos
 
-bash system_info.sh
+- Un sistema operativo Linux.
+- Bash instalado en el sistema (disponible por defecto en la mayoría de las distribuciones de Linux).
+
+## Configuración y Ejecución
+
+1. Clonar o descargar el repositorio.
+2. Navegar al directorio del script.
+3. Hacer el script ejecutable con `chmod +x system_info.sh`.
+4. Ejecutar el script con `./system_info.sh`.
+
+## Autor
+
+- TheHacha167
+
+---
+
+© 2023 TheHacha167 - Todos los derechos reservados.
