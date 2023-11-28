@@ -14,4 +14,7 @@ The script runs in a loop, displaying a menu for the user to select an option. T
 To run the script, you can use the following command in a terminal:
 
 ```shell
+chmod +x system_info.sh
+
+```shell
 bash system_info.sh
