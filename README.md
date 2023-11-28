@@ -16,5 +16,4 @@ To run the script, you can use the following command in a terminal:
 ```shell
 chmod +x system_info.sh
 
-```shell
 bash system_info.sh
