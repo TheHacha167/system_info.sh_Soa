@@ -14,7 +14,7 @@ function dir_size {
 
 # Función para obtener el uso del procesador
 function cpu_usage {
-    top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
+    mpstat | awk '/all/ {printf "CPU Load: %.2f%%\n", 100 - $NF}'
 }
 
 # Función para obtener el número de usuarios conectados
